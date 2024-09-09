@@ -1,0 +1,29 @@
+
+    
+server:
+  port: 8083
+spring:
+  application:
+    name: EUREKA
+    
+cloud:
+    gateway:
+      mvc:
+       routes:
+        - id: MANAGER-SERVICE
+          uri: lb://MicoManagerLibrary
+          predicates:
+            - Path=/student/**
+        - id: AUTHENTICAT-SERVICE
+          uri: lb://MicroAuthentication
+          predicates:
+            - Path=/school/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
