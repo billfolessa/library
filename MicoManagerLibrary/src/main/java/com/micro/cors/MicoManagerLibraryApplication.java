@@ -35,9 +35,9 @@ public class MicoManagerLibraryApplication {
 	}
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("Library Spring Boot REST API Documentation")
-            .description("REST APIs For Managing Books loans in a Library")
-            .contact(new Contact("Georges Kemayo", "https://gkemayo.developpez.com/", "noreply.library.test@gmail.com"))
+        return new ApiInfoBuilder().title("Library REST API Documentation")
+            .description("Detail REST API Documentation ")
+            .contact(new Contact("Devs", "https://localhost:8082/contact", "noreply.test@gmail.com"))
             .version("1.0")
             .build();
     }
